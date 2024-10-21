@@ -1,0 +1,505 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Prevents horizontal scroll */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Header */
+header {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+}
+
+/* Style for the logo */
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.logo div {
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(27, 155, 206);
+  text-transform: uppercase;
+}
+
+/* No hover color change */
+
+/* Additional responsive styling */
+@media (max-width: 768px) {
+  .logo div {
+    font-size: 22px;
+    text-align: center;
+    padding: 5px;
+  }
+}
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding: 10px 15px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff6600;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.about_p {
+  line-height: 25px;
+
+}
+
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  /* Adjust height for hero */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('/hero-background.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: #ff6600;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #cc5200;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+}
+
+
+/* Section styles */
+.section {
+  padding: 50px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 20px;
+}
+
+
+
+/* Image Section */
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  /* Add some space before and after */
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* Optional: Add some styling like rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a shadow */
+}
+
+
+/* Services Section Styling */
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.service-card {
+  flex-basis: calc(33.333% - 20px);
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 25px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background-color: #e6e6e6;
+}
+
+/* Responsive Cards for Smaller Screens */
+@media (max-width: 992px) {
+  .service-card {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex-basis: calc(100% - 20px);
+  }
+}
+
+
+.portfolio-gallery {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-item {
+  flex-basis: 30%;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center items horizontally */
+  text-align: center;
+  /* Center text */
+  padding: 50px 20px;
+  /* Add padding for spacing */
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+  /* Space between contact info and form */
+}
+
+.contact-info p {
+  font-size: 18px;
+  /* Consistent font size for contact info */
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  /* Stack form elements */
+  align-items: center;
+  /* Center form elements */
+  width: 100%;
+  max-width: 500px;
+  /* Set max width for form */
+}
+
+form label {
+  margin-bottom: 5px;
+  /* Space between label and input */
+  font-size: 18px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  /* Full width */
+  padding: 15px;
+  /* Padding for inputs */
+  margin-bottom: 20px;
+  /* Space between inputs */
+  border: 2px solid #003366;
+  /* Border color */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 16px;
+  /* Font size for inputs */
+}
+
+form textarea {
+  height: 100px;
+  /* Height for textarea */
+  resize: none;
+  /* Disable resize */
+}
+
+.submit-btn {
+  background: #ff6600;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
+  padding: 10px 20px;
+  /* Button padding */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer on hover */
+  font-size: 18px;
+  /* Font size for button */
+  transition: background 0.3s;
+  /* Transition effect */
+}
+
+.submit-btn:hover {
+  background: #cc5200;
+  /* Darker color on hover */
+}
+
+/* Why Choose Us Section Styles */
+.why-choose-us {
+  text-align: center;
+  /* Center align text */
+  padding: 50px 20px;
+  /* Add padding for spacing */
+}
+
+.why-choose-us h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  /* Space below heading */
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  /* Flexbox for responsive layout */
+  justify-content: space-between;
+  /* Space out cards */
+  flex-wrap: wrap;
+  /* Wrap cards to next line */
+  cursor: pointer;
+}
+
+/* Card Styles */
+.card {
+  background: #f4f4f4;
+  /* Light background */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Shadow for depth */
+  padding: 20px;
+  /* Padding inside cards */
+  margin: 10px;
+  /* Space between cards */
+  flex-basis: calc(25% - 20px);
+  /* Responsive width (4 cards in a row) */
+  transition: transform 0.3s;
+  /* Transition for hover effect */
+}
+
+.card h3 {
+  color: #003366;
+  /* Heading color */
+  font-size: 24px;
+  /* Heading size */
+  margin-bottom: 10px;
+  /* Space below heading */
+}
+
+.card p {
+  color: #333;
+  /* Paragraph color */
+  font-size: 16px;
+  /* Paragraph size */
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+  /* Lift effect on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    flex-basis: calc(50% - 20px);
+    /* 2 cards in a row for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex-basis: 100%;
+    /* 1 card in a row for mobile */
+  }
+}
+
+
+/* Footer */
+footer {
+  background: #003366;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    /* Stack the logo and nav items */
+  }
+
+  header ul {
+    flex-direction: column;
+    /* Stack navigation items vertically */
+  }
+
+  .service {
+    flex-basis: 100%;
+    /* Stack services on small screens */
+    margin: 10px 0;
+    /* Margin adjustment for stacking */
+  }
+
+  .hero h2 {
+    font-size: 28px;
+    /* Smaller font size for the hero heading */
+  }
+
+  .hero p {
+    font-size: 16px;
+    /* Smaller font size for the hero paragraph */
+  }
+
+  .section h2 {
+    font-size: 28px;
+    /* Adjust section heading size */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 24px;
+    /* Further reduce font size for very small screens */
+  }
+
+  .hero p {
+    font-size: 14px;
+    /* Further reduce paragraph size */
+  }
+
+  form input,
+  form textarea {
+    max-width: 90%;
+    /* Allow more width for inputs */
+  }
+}
