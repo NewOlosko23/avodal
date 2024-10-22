@@ -83,6 +83,43 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+/* Get in Touch Button */
+.mobile_links {
+  background-color: #ff6600;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Display Navigation Links on Large Screens */
+@media (min-width: 769px) {
+  .navigation_links {
+    display: flex;
+  }
+
+  .mobile_links {
+    display: none;
+  }
+}
+
+/* Display Only Get in Touch Button on Small Screens */
+@media (max-width: 768px) {
+
+  h2 {
+    line-height: 30px;
+  }
+
+  .navigation_links {
+    display: none;
+  }
+
+  .mobile_links {
+    display: block;
+  }
+}
+
 .about_p {
   line-height: 25px;
   padding: 10px;

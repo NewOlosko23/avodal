@@ -8,21 +8,27 @@
   <title>Avodal Technology | Powering Your Digital World</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="logo-black.svg" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
   <!-- Header and Navigation -->
   <header>
-    <nav>
+    <nav class="flex justify-between">
       <div class="logo">
-        Avodal Technology
+        <img src="logo-no-background.png" alt="logo" width="200px" height="150px" />
       </div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div>
+        <ul class="navigation_links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile_links">
+          <a href="#contact" class="btn">Get Started</a>
+        </div>
+      </div>
     </nav>
 
 
@@ -37,7 +43,7 @@
 
   <!-- About Us Section -->
   <section id="about" class="section">
-    <h2>About Avodal Technology</h2>
+    <h2>Who we are</h2>
     <p class="about_p">At Avodal Technology, we are committed to delivering innovative tech solutions. Whether you need
       a stunning
       website, a robust network, or reliable CCTV installation, we have the expertise to power your digital world while
@@ -112,32 +118,30 @@
   <!-- Portfolio Section -->
 
 
-  <!-- Why Choose Us Section -->
   <section id="why-choose-us" class="section why-choose-us">
-    <h2>Why Choose Avodal Technology?</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Professional Expertise</h3>
-        <p>Our team is experienced in a range of tech solutions, ensuring top-notch service and support for your
-          projects.</p>
+    <h2>Why Choose Us</h2>
+    <div class="service-container">
+      <!-- Use the same container class -->
+      <div class="service-card">
+        <!-- Use the same card class -->
+        <h3>Expert Team</h3>
+        <p>Our team is composed of highly experienced professionals dedicated to delivering the best services.</p>
       </div>
-      <div class="card">
-        <h3>Customized Services</h3>
-        <p>We tailor our services to meet the specific needs of your business, providing personalized solutions that fit
-          perfectly.</p>
-      </div>
-      <div class="card">
-        <h3>Affordable Pricing</h3>
-        <p>We provide high-quality services at competitive prices, ensuring you get the best value for your investment.
-        </p>
-      </div>
-      <div class="card">
+      <div class="service-card">
         <h3>Reliable Support</h3>
-        <p>From setup to ongoing support, we’re here when you need us, offering assistance at every stage of your
-          journey.</p>
+        <p>We provide 24/7 support to ensure that your needs are met promptly and efficiently.</p>
+      </div>
+      <div class="service-card">
+        <h3>Affordable Pricing</h3>
+        <p>We offer competitive prices for all our services without compromising on quality.</p>
+      </div>
+      <div class="service-card">
+        <h3>Customer Satisfaction</h3>
+        <p>Your satisfaction is our priority. We work to exceed expectations on every project.</p>
       </div>
     </div>
   </section>
+
 
 
   <!-- Contact Section -->
