@@ -18,7 +18,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /* Header */
 header {
   background-color: #003366;
@@ -36,7 +35,6 @@ nav {
   background: transparent;
 }
 
-/* Style for the logo */
 .logo {
   display: flex;
   align-items: center;
@@ -50,19 +48,6 @@ nav {
   color: rgb(27, 155, 206);
   text-transform: uppercase;
 }
-
-/* No hover color change */
-
-/* Additional responsive styling */
-@media (max-width: 768px) {
-  .logo div {
-    font-size: 22px;
-    text-align: center;
-    padding: 5px;
-  }
-}
-
-
 
 nav ul {
   list-style: none;
@@ -100,22 +85,21 @@ nav ul li a:hover::after {
 
 .about_p {
   line-height: 25px;
-
+  padding: 10px;
 }
-
 
 /* Hero Section */
 .hero {
   height: 60vh;
-  /* Adjust height for hero */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('/hero-background.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('stock2.jpg') center/cover no-repeat;
   color: #fff;
   padding: 20px;
   text-align: center;
+  margin-bottom: -20px;
 }
 
 .hero h2 {
@@ -153,10 +137,35 @@ nav ul li a:hover::after {
 
   .hero h2 {
     font-size: 30px;
+    line-height: 1.4;
+    /* Increased line height for smaller screens */
   }
 
   .hero p {
     font-size: 16px;
+    line-height: 1.5;
+    /* Adjust line height for better spacing */
+  }
+
+  .section h2 {
+    font-size: 28px;
+    /* Adjust size for smaller screens */
+    line-height: 1.4;
+    /* Increased line height to prevent overlap */
+  }
+
+  .service-card h3 {
+    font-size: 22px;
+    /* Adjust header size in service cards */
+    line-height: 1.4;
+    /* Increased line height to prevent overlap */
+  }
+
+  .service-card p {
+    font-size: 16px;
+    /* Font size for paragraphs in service cards */
+    line-height: 1.6;
+    /* Better spacing for paragraphs */
   }
 
   .hero {
@@ -167,10 +176,35 @@ nav ul li a:hover::after {
 @media (max-width: 480px) {
   .hero h2 {
     font-size: 24px;
+    line-height: 1.5;
+    /* Increased line height for better readability */
   }
 
   .hero p {
     font-size: 14px;
+    line-height: 1.5;
+    /* Adjust line height for better spacing */
+  }
+
+  .section h2 {
+    font-size: 24px;
+    /* Adjust size for very small screens */
+    line-height: 1.4;
+    /* Increased line height to prevent overlap */
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+    /* Adjust header size in service cards */
+    line-height: 1.4;
+    /* Increased line height to prevent overlap */
+  }
+
+  .service-card p {
+    font-size: 14px;
+    /* Font size for paragraphs in service cards */
+    line-height: 1.6;
+    /* Better spacing for paragraphs */
   }
 
   .hero {
@@ -178,6 +212,9 @@ nav ul li a:hover::after {
   }
 }
 
+h2 {
+  line-height: 15px;
+}
 
 /* Section styles */
 .section {
@@ -189,9 +226,8 @@ nav ul li a:hover::after {
   margin-bottom: 20px;
   font-size: 32px;
   line-height: 20px;
+  padding: 10px;
 }
-
-
 
 /* Image Section */
 .image-section {
@@ -199,18 +235,65 @@ nav ul li a:hover::after {
   justify-content: center;
   align-items: center;
   margin: 50px 0;
-  /* Add some space before and after */
+  border-radius: 10px;
 }
 
-.image-section img {
+.image-section1 {
+  border-radius: 18px;
+}
+
+.image-text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+}
+
+.image-text-container img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  /* Optional: Add some styling like rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Optional: Add a shadow */
 }
 
+.text-container {
+  margin-left: 20px;
+  max-width: 50%;
+}
+
+.text-container h3 {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-text-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .text-container h3 {
+    font-size: 22px;
+  }
+
+  .text-container p {
+    font-size: 16px;
+  }
+}
 
 /* Services Section Styling */
 .service-container {
@@ -231,6 +314,21 @@ nav ul li a:hover::after {
   line-height: 25px;
 }
 
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service-card img:hover {
+  transform: scale(1.05);
+}
+
+
 .service-card:hover {
   transform: translateY(-5px);
   background-color: #e6e6e6;
@@ -249,7 +347,7 @@ nav ul li a:hover::after {
   }
 }
 
-
+/* Portfolio Section */
 .portfolio-gallery {
   display: flex;
   justify-content: space-between;
@@ -270,11 +368,8 @@ nav ul li a:hover::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Center items horizontally */
   text-align: center;
-  /* Center text */
   padding: 50px 20px;
-  /* Add padding for spacing */
 }
 
 .contact-section h2 {
@@ -289,217 +384,140 @@ nav ul li a:hover::after {
 
 .contact-info {
   margin-bottom: 30px;
-  /* Space between contact info and form */
 }
 
 .contact-info p {
   font-size: 18px;
-  /* Consistent font size for contact info */
 }
 
-/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
-  /* Stack form elements */
   align-items: center;
-  /* Center form elements */
   width: 100%;
   max-width: 500px;
-  /* Set max width for form */
 }
 
 form label {
   margin-bottom: 5px;
-  /* Space between label and input */
   font-size: 18px;
 }
 
 form input,
 form textarea {
   width: 100%;
-  /* Full width */
   padding: 15px;
-  /* Padding for inputs */
   margin-bottom: 20px;
-  /* Space between inputs */
   border: 2px solid #003366;
-  /* Border color */
   border-radius: 5px;
-  /* Rounded corners */
   font-size: 16px;
-  /* Font size for inputs */
 }
 
 form textarea {
   height: 100px;
-  /* Height for textarea */
   resize: none;
-  /* Disable resize */
 }
 
 .submit-btn {
   background: #ff6600;
-  /* Button background color */
   color: #fff;
-  /* Button text color */
   padding: 10px 20px;
-  /* Button padding */
   border: none;
-  /* Remove border */
   border-radius: 5px;
-  /* Rounded corners */
   cursor: pointer;
-  /* Pointer on hover */
   font-size: 18px;
-  /* Font size for button */
   transition: background 0.3s;
-  /* Transition effect */
 }
 
 .submit-btn:hover {
   background: #cc5200;
-  /* Darker color on hover */
 }
 
-/* Why Choose Us Section Styles */
+/* Why Choose Us Section */
 .why-choose-us {
   text-align: center;
-  /* Center align text */
   padding: 50px 20px;
-  /* Add padding for spacing */
 }
 
 .why-choose-us h2 {
   font-size: 32px;
   margin-bottom: 30px;
-  /* Space below heading */
 }
 
-/* Card Container */
 .card-container {
   display: flex;
-  /* Flexbox for responsive layout */
   justify-content: space-between;
-  /* Space out cards */
   flex-wrap: wrap;
-  /* Wrap cards to next line */
   cursor: pointer;
 }
 
-/* Card Styles */
 .card {
   background: #f4f4f4;
-  /* Light background */
   border-radius: 10px;
-  /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* Shadow for depth */
   padding: 20px;
-  /* Padding inside cards */
   margin: 10px;
-  /* Space between cards */
   flex-basis: calc(25% - 20px);
-  /* Responsive width (4 cards in a row) */
   transition: transform 0.3s;
-  /* Transition for hover effect */
 }
 
 .card h3 {
   color: #003366;
-  /* Heading color */
   font-size: 24px;
-  /* Heading size */
   margin-bottom: 10px;
-  /* Space below heading */
 }
 
 .card p {
   color: #333;
-  /* Paragraph color */
   font-size: 16px;
-  /* Paragraph size */
 }
 
-/* Card Hover Effect */
 .card:hover {
   transform: translateY(-5px);
-  /* Lift effect on hover */
 }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .card {
-    flex-basis: calc(50% - 20px);
-    /* 2 cards in a row for tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    flex-basis: 100%;
-    /* 1 card in a row for mobile */
-  }
-}
-
 
 /* Footer */
 footer {
-  background: #003366;
+  background-color: #003366;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-    /* Stack the logo and nav items */
-  }
-
-  header ul {
-    flex-direction: column;
-    /* Stack navigation items vertically */
-  }
-
-  .service {
-    flex-basis: 100%;
-    /* Stack services on small screens */
-    margin: 10px 0;
-    /* Margin adjustment for stacking */
-  }
-
-  .hero h2 {
-    font-size: 28px;
-    /* Smaller font size for the hero heading */
-  }
-
-  .hero p {
-    font-size: 16px;
-    /* Smaller font size for the hero paragraph */
-  }
-
-  .section h2 {
-    font-size: 28px;
-    /* Adjust section heading size */
-  }
+footer p {
+  margin: 0;
 }
 
-@media (max-width: 480px) {
-  .hero h2 {
-    font-size: 24px;
-    /* Further reduce font size for very small screens */
-  }
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  /* Distance from the bottom of the page */
+  right: 20px;
+  /* Distance from the right of the page */
+  background-color: #ff6600;
+  /* Button color */
+  color: white;
+  /* Text color */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 10px 15px;
+  /* Padding */
+  font-size: 16px;
+  /* Font size */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  display: none;
+  /* Hide the button by default */
+  transition: background 0.3s;
+  /* Smooth transition */
+  z-index: 1000;
+  /* Ensure the button appears above other content */
+}
 
-  .hero p {
-    font-size: 14px;
-    /* Further reduce paragraph size */
-  }
 
-  form input,
-  form textarea {
-    max-width: 90%;
-    /* Allow more width for inputs */
-  }
+.back-to-top:hover {
+  background-color: #cc5200;
+  /* Darker color on hover */
 }
