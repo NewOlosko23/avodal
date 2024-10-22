@@ -26,7 +26,25 @@ header {
   padding-bottom: 20px;
 }
 
+
 /* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.scrolled .navbar {
+  background-color: #003366;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -411,12 +429,18 @@ h2 {
 
 .contact-section h2 {
   font-size: 32px;
+  /* Match font size with other section headers */
   margin-bottom: 20px;
+  line-height: 40px;
+  /* Adjusted line height for better spacing */
 }
 
 .contact-section p {
   margin-bottom: 20px;
   font-size: 18px;
+  /* Match font size with other sections */
+  line-height: 1.6;
+  /* Match line height for readability */
 }
 
 .contact-info {
@@ -425,6 +449,9 @@ h2 {
 
 .contact-info p {
   font-size: 18px;
+  /* Match font size with other sections */
+  line-height: 1.6;
+  /* Ensure line height is consistent */
 }
 
 form {
@@ -438,21 +465,28 @@ form {
 form label {
   margin-bottom: 5px;
   font-size: 18px;
+  /* Adjust label font size to match other sections */
 }
 
 form input,
 form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 2px solid #003366;
+  border: 1px solid #ccc;
+  /* Light gray border */
   border-radius: 5px;
+  /* Rounded corners */
+  padding: 10px;
+  /* Padding for better spacing */
   font-size: 16px;
+  /* Font size for inputs */
+  transition: border-color 0.3s;
 }
 
-form textarea {
-  height: 100px;
-  resize: none;
+form input:focus,
+form textarea:focus {
+  border-color: #ff6600;
+  /* Change border color on focus */
+  outline: none;
+  /* Remove default outline */
 }
 
 .submit-btn {
@@ -462,12 +496,13 @@ form textarea {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
   transition: background 0.3s;
+  margin-top: 10px;
 }
 
 .submit-btn:hover {
   background: #cc5200;
+  /* Darker color on hover */
 }
 
 /* Why Choose Us Section */
