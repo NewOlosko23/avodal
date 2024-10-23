@@ -39,7 +39,7 @@ document.getElementById('project-form').addEventListener('submit', function (eve
   const projectDetails = document.getElementById('project-details').value;
 
   const whatsappMessage = `*Project Details*\n\n*Your Name:* ${name}\n*Contact:* ${contact}\n*Service Type:* ${serviceType}\n*Budget:* ${budget}\n*Project Details:* ${projectDetails}`;
-  const whatsappNumber = '25477590711';
+  const whatsappNumber = '254799590711';
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   window.open(whatsappLink, '_blank');
