@@ -45,6 +45,7 @@ body.scrolled .navbar {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+
 nav {
   display: flex;
   justify-content: space-between;
