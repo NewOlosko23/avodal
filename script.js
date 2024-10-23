@@ -1,32 +1,20 @@
 
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopButton = document.getElementById('backToTop');
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  const email = document.getElementById("email").value;
-  const name = document.getElementById("name").value;
-  const message = document.getElementById("message").value;
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  };
 
-  if (!email || !name || !message) {
-    alert("All fields are required!");
-    e.preventDefault();
-  }
-});
-
-
-const backToTopButton = document.getElementById('backToTop');
-
-window.onscroll = function () {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-};
-
-
-backToTopButton.addEventListener('click', function () {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+  backToTopButton.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 });
 
@@ -38,4 +26,23 @@ window.addEventListener('scroll', function () {
   } else {
     body.classList.remove('scrolled');
   }
+});
+
+
+document.getElementById('project-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const contact = document.getElementById('contact').value;
+  const serviceType = document.getElementById('service-type').value;
+  const budget = document.getElementById('budget').value;
+  const projectDetails = document.getElementById('project-details').value;
+
+  const whatsappMessage = `*Project Details*\n\n*Your Name:* ${name}\n*Contact:* ${contact}\n*Service Type:* ${serviceType}\n*Budget:* ${budget}\n*Project Details:* ${projectDetails}`;
+  const whatsappNumber = '25477590711';
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(whatsappLink, '_blank');
+
+  this.reset();
 });
