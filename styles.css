@@ -141,6 +141,8 @@ nav ul li a:hover::after {
 .about_p {
   line-height: 25px;
   padding: 10px;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 /* Hero Section */
@@ -272,7 +274,10 @@ h2 {
 }
 
 /* Section styles */
+/* Global max-width for sections */
 .section {
+  max-width: 1024;
+  margin: 0 auto;
   padding: 50px 20px;
 }
 
@@ -351,7 +356,10 @@ h2 {
 }
 
 /* Services Section Styling */
+/* Services Section */
 .service-container {
+  max-width: 1024px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -385,9 +393,11 @@ h2 {
 
 
 .service-card:hover {
-  transform: translateY(-5px);
-  background-color: #e6e6e6;
+  background-color: #ff6600;
+  color: #fff;
+  transform: scale(1.05);
 }
+
 
 /* Responsive Cards for Smaller Screens */
 @media (max-width: 992px) {
@@ -418,102 +428,118 @@ h2 {
   border-radius: 10px;
 }
 
-/* Contact Section Styles */
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.contact-container {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
   text-align: center;
-  padding: 50px 20px;
-}
-
-.contact-section h2 {
-  font-size: 32px;
-  /* Match font size with other section headers */
+  font-size: 36px;
   margin-bottom: 20px;
-  line-height: 40px;
-  /* Adjusted line height for better spacing */
+  color: #333;
 }
 
-.contact-section p {
-  margin-bottom: 20px;
+.section-description {
+  text-align: center;
   font-size: 18px;
-  /* Match font size with other sections */
-  line-height: 1.6;
-  /* Match line height for readability */
+  margin-bottom: 40px;
+  color: #666;
 }
 
-.contact-info {
-  margin-bottom: 30px;
-}
-
-.contact-info p {
-  font-size: 18px;
-  /* Match font size with other sections */
-  line-height: 1.6;
-  /* Ensure line height is consistent */
-}
-
-form {
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 40px;
+}
+
+
+.contact-form-section {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 768px;
   width: 100%;
-  max-width: 500px;
+  margin: 0 auto;
+
 }
 
-form label {
-  margin-bottom: 5px;
-  font-size: 18px;
-  /* Adjust label font size to match other sections */
+.form-group {
+  margin-bottom: 20px;
 }
 
-form input,
-form textarea {
-  border: 1px solid #ccc;
-  /* Light gray border */
-  border-radius: 5px;
-  /* Rounded corners */
-  padding: 10px;
-  /* Padding for better spacing */
+.form-group label {
   font-size: 16px;
-  /* Font size for inputs */
-  transition: border-color 0.3s;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
 }
 
-form input:focus,
-form textarea:focus {
-  border-color: #ff6600;
-  /* Change border color on focus */
-  outline: none;
-  /* Remove default outline */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.submit-btn {
-  background: #ff6600;
-  color: #fff;
-  padding: 10px 20px;
+.submit-button {
+  width: 100%;
+  background-color: #ff6f61;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
-  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-  background: #cc5200;
-  /* Darker color on hover */
+.submit-button:hover {
+  background-color: #ff3d30;
 }
+
+.contact-info-section {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-links {
+  margin-top: 20px;
+}
+
+.contact-link {
+  display: block;
+  font-size: 18px;
+  color: #ff6f61;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #ff3d30;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 
 /* Why Choose Us Section */
 .why-choose-us {
+  max-width: 1024px;
+  margin: 0 auto;
   text-align: center;
   padding: 50px 20px;
-}
-
-.why-choose-us h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
 }
 
 .card-container {
@@ -522,6 +548,12 @@ form textarea:focus {
   flex-wrap: wrap;
   cursor: pointer;
 }
+
+.why-choose-us h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
 
 .card {
   background: #f4f4f4;
@@ -583,13 +615,94 @@ footer p {
   display: none;
   /* Hide the button by default */
   transition: background 0.3s;
-  /* Smooth transition */
   z-index: 1000;
-  /* Ensure the button appears above other content */
 }
 
 
 .back-to-top:hover {
   background-color: #cc5200;
   /* Darker color on hover */
+}
+
+
+/* Onboarding Process Section */
+.process-section {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.section-description {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.step:hover {
+  transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.step-number {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 15px;
+}
+
+
+.step-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.step-content p {
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 480px) {
+
+  /* Project Details Section */
+  .project-details-section {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* Onboarding Process Section */
+  .process-section {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* Image Section 1 */
+  .image-section1 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }

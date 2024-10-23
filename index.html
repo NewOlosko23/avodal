@@ -23,10 +23,10 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact-info-section">Contact</a></li>
         </ul>
         <div class="mobile_links">
-          <a href="#contact" class="btn">Get Started</a>
+          <a href="#contact-form-section" class="btn">Get Started</a>
         </div>
       </div>
     </nav>
@@ -36,7 +36,7 @@
     <div class="hero">
       <h2>Powering Your Digital World, Securing Your Space</h2>
       <p>Your one-stop solution for website development, networking, CCTV installation, and more.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
+      <a href="#contact-form-section" class="btn">Get Started</a>
     </div>
 
   </header>
@@ -115,6 +115,58 @@
     </div>
   </section>
 
+  <section id="onboarding-process" class="process-section">
+    <div class="container">
+      <h2 class="section-title">Onboarding Process</h2>
+      <p class="section-description">Follow these simple steps to begin working with us and receive top-notch product
+        tailored to your needs.</p>
+      <div class="process-steps">
+
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Submit Project Details</h3>
+            <p>Provide us with your project requirements, including your goals, expected features, and budget. We gather
+              all the information to tailor the perfect solution for you.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Receive a Quote Within 6 Hours</h3>
+            <p>We carefully assess your project and, within 6 hours, deliver a detailed quote. The quote outlines the
+              project scope, timeline, and costs for your review.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Agree & Make Payment</h3>
+            <p>Review the quote and once you are satisfied, agree to the terms. After signing the agreement, proceed
+              with the initial payment to kickstart the project.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Project Delivery & Approval</h3>
+            <p>We complete the project and deliver the final product or service to you for approval. Upon your
+              satisfaction, the project is considered complete.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- Portfolio Section -->
 
@@ -145,30 +197,67 @@
 
 
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <h2>Contact Us</h2>
-    <p>If you’re ready to take your digital presence to the next level or secure your space, don’t hesitate to get in
-      touch.</p>
-    <div class="contact-info">
-      <p><strong>WhatsApp</strong> <a href="https://wa.me/254799590711" target="_blank">Chat with us on WhatsApp</a>
-      </p>
-      <p><strong>Phone:</strong> +254799590711</p>
-      <p><strong>Email:</strong> oloogeorge633@gmail.com</p>
+  <section id="contact-section" class="contact-container">
+    <div class="container">
+
+      <!-- Project Details Form Section -->
+      <div class="contact-form-section" id="contact-form-section">
+        <h2 class="section-title">Project Details</h2>
+        <p class="section-description">Tell us about your project, and we'll get back to you with a tailored solution.
+        </p>
+        <form id="project-form" action="/submit" method="POST">
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Email or Phone Number</label>
+            <input type="text" id="contact" name="contact" required placeholder="Enter your email or phone number">
+          </div>
+
+          <div class="form-group">
+            <label for="service-type">Type of Service</label>
+            <select id="service-type" name="service-type" required>
+              <option value="">Select the service you need</option>
+              <option value="web-design">Web Design</option>
+              <option value="app-development">App Development</option>
+              <option value="networking">Networking</option>
+              <option value="cctv-installation">CCTV Installation</option>
+              <option value="software-solution">Custom Software Solution</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Your Budget</label>
+            <input type="text" id="budget" name="budget" placeholder="Enter your budget">
+          </div>
+
+          <div class="form-group">
+            <label for="project-details">Project Details</label>
+            <textarea id="project-details" name="project-details" rows="5" required
+              placeholder="Describe your project..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Submit Project</button>
+        </form>
+      </div>
+
+      <!-- Contact Details Section -->
+      <div class="contact-info-section" id="contact-info-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-description">You can reach out to us through the following contact methods:</p>
+        <div class="contact-links">
+          <a href="https://wa.me/254799590711" class="contact-link">WhatsApp Us</a>
+          <a href="tel:+254799590711" class="contact-link">Call Us: +254799590711</a>
+          <a href="mailto:oloogeorge633@gmail.com" class="contact-link">Email: oloogeorge633@gmail.com</a>
+        </div>
+      </div>
+
     </div>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
   </section>
+
 
 
   <!-- Footer -->
