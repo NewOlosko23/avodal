@@ -214,7 +214,6 @@ nav ul li a:hover::after {
 
   .service-card h3 {
     font-size: 22px;
-    /* Adjust header size in service cards */
     line-height: 1.4;
   }
 
@@ -377,6 +376,12 @@ h2 {
   line-height: 25px;
 }
 
+.service-card h3 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
 .service-card img {
   width: 100%;
   height: auto;
@@ -431,7 +436,14 @@ h2 {
 .contact-container {
   padding: 50px 0;
   background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+
 }
+
 
 .section-title {
   text-align: center;
@@ -628,10 +640,22 @@ footer p {
 
 /* Onboarding Process Section */
 .process-section {
-  max-width: 1024px;
-  margin: 0 auto;
   padding: 50px 0;
   background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  /* Align items in a column */
+  align-items: center;
+  /* Center items horizontally */
+  justify-content: center;
+  /* Center items vertically (if needed) */
+  margin: 0 auto;
+  /* Center the container itself */
+  max-width: 800px;
+  /* Adjust width as necessary */
+  width: 100%;
+  text-align: center;
+  /* Center text if applicable */
 }
 
 .section-title {
@@ -712,4 +736,57 @@ footer p {
 
 #more {
   text-decoration: underline;
+}
+
+
+/* Increased Line Heights for Better Readability on Smaller Screens */
+@media (max-width: 768px) {
+
+  body,
+  p {
+    line-height: 1.7;
+    /* Apply globally to paragraphs for more spacious text */
+  }
+
+  .about_p,
+  .hero p,
+  .service-card p,
+  .text-container p,
+  .section-description,
+  .card p {
+    line-height: 1.8;
+    /* More breathing room for paragraph text */
+  }
+
+  /* Hero section adjustments */
+  .hero h2 {
+    line-height: 1.5;
+  }
+
+  /* Section and card headers */
+  .section h2,
+  .service-card h3,
+  .text-container h3,
+  .card h3 {
+    line-height: 1.4;
+  }
+}
+
+/* Further adjustments for smaller screens */
+@media (max-width: 480px) {
+
+  .hero h2,
+  .section h2,
+  .text-container h3,
+  .card h3 {
+    line-height: 1.5;
+  }
+
+  .hero p,
+  .service-card p,
+  .text-container p,
+  .section-description,
+  .card p {
+    line-height: 1.85;
+  }
 }
