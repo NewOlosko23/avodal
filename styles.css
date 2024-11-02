@@ -182,7 +182,8 @@ nav ul li a:hover::after {
 }
 
 .hero .btn:hover {
-  background: #cc5200;
+  background-color: #004080;
+  color: #ffffff;
 }
 
 /* Responsive Design */
@@ -597,7 +598,7 @@ h2 {
 footer {
   background-color: #003366;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
