@@ -2,4 +2,4 @@
 
 
 https://newolosko23.github.io/avodal
-One Page
+One Page Website
